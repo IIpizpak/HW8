@@ -33,10 +33,6 @@ public class MyLinkedList <T> {
         size++;
     }
 
-//    public T add(int index, T value) {
-//        return null;              Как оказалось, его делать не нужно.
-//    }
-
     public void remove(int index) {
         Node<T> removing = firstNode;
         for (int i = 0; i < index; i++) {
