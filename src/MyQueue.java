@@ -1,8 +1,6 @@
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 import java.util.Arrays;
 
-public class MyQueue <T> {
+public class MyQueue<T> {
 
     private T[] queue;
 
@@ -11,17 +9,16 @@ public class MyQueue <T> {
         if (queue == null) {
             queueTemp = (T[]) new Object[1];
             queueTemp[0] = item;
-        }
-        else {
+        } else {
             queueTemp = (T[]) new Object[queue.length + 1];
-           System.arraycopy(queue, 0, queueTemp, 0, queue.length);
-           queueTemp[queueTemp.length - 1] = item;
+            System.arraycopy(queue, 0, queueTemp, 0, queue.length);
+            queueTemp[queueTemp.length - 1] = item;
         }
         this.queue = queueTemp;
         return queue;
     }
 
-    public T[] remove (Integer index) {
+    public T[] remove(Integer index) {
         T[] queueTemp = (T[]) new Object[queue.length - 1];
         int j = 0;
         for (int i = 0; i < queue.length; i++) {
@@ -44,7 +41,7 @@ public class MyQueue <T> {
         return queue.length;
     }
 
-    public T peek () {
+    public T peek() {
         return queue[0];
     }
 

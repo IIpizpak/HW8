@@ -1,4 +1,4 @@
-public class MyLinkedList <T> {
+public class MyLinkedList<T> {
 
     private Node<T> firstNode;
     private Node<T> lastNode;
@@ -20,14 +20,13 @@ public class MyLinkedList <T> {
         System.out.println(list.get(0));
     }
 
-    public void add (T value) {
+    public void add(T value) {
         Node<T> last = lastNode;
         Node<T> newNode = new Node<T>(value, last, firstNode);
         lastNode = newNode;
         if (last == null) {
             firstNode = newNode;
-        }
-        else {
+        } else {
             last.setNext(newNode);
         }
         size++;
@@ -46,7 +45,7 @@ public class MyLinkedList <T> {
         size--;
     }
 
-    public void clear () {
+    public void clear() {
         Node<T> first = firstNode;
         for (int i = 0; i < size; i++) {
             first.setItem(null);
@@ -56,11 +55,11 @@ public class MyLinkedList <T> {
         size = 0;
     }
 
-    public Integer size () {
+    public Integer size() {
         return size;
     }
 
-    public T get (int index) {
+    public T get(int index) {
         Node<T> target = firstNode;
         for (int i = 0; i < index; i++) {
             target = target.getNext();

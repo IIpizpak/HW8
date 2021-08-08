@@ -1,6 +1,6 @@
 package MyHashMap;
 
-public interface MyHashMapMethods <K, V> {
+public interface MyHashMapMethods<K, V> {
     void remove(K key);
 
     void clear();

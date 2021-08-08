@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class MyStack <T> {
+public class MyStack<T> {
 
     private T[] stack;
 
@@ -18,7 +18,7 @@ public class MyStack <T> {
         return stack;
     }
 
-    public T[] remove (int index) {
+    public T[] remove(int index) {
         T[] stackTemp = (T[]) new Object[stack.length - 1];
         int j = 0;
         for (int i = 0; i < stack.length; i++) {
@@ -31,7 +31,7 @@ public class MyStack <T> {
         return stack;
     }
 
-    public T[] clear () {
+    public T[] clear() {
         T[] tempStack = (T[]) new Object[0];
         return this.stack = tempStack;
     }
@@ -40,11 +40,11 @@ public class MyStack <T> {
         return stack.length;
     }
 
-    public T peek () {
+    public T peek() {
         return stack[stack.length - 1];
     }
 
-    public T pop () {
+    public T pop() {
         T[] stackTemp = (T[]) new Object[stack.length - 1];
         T temp = stack[stack.length - 1];
         System.arraycopy(stack, 0, stackTemp, 0, stack.length - 1);

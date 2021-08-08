@@ -1,4 +1,4 @@
-public class MyArrayList <T>{
+public class MyArrayList<T> {
 
     private T[] array;
 
@@ -46,7 +46,7 @@ public class MyArrayList <T>{
     public T get(int index) {
         if (array == null) return (T) "Exception - Array is empty";
         return array[index];
-        }
+    }
 }
 
 class MyArrayListTester {
