@@ -6,13 +6,13 @@ public class MyLinkedList <T> {
 
     public static void main(String[] args) {
         MyLinkedList<String> list = new MyLinkedList<>();
-        list.add("Здорова");
-        list.add("Zdorova");
-        list.add("Zdorova");
-        list.add("Zdorova");
-        list.add("Zdorova");
-        list.add("Zdorova");
-        list.add("Zdorova");
+        list.add("Privet");
+        list.add("Privet1");
+        list.add("Privet2");
+        list.add("Privet3");
+        list.add("Privet4");
+        list.add("Privet5");
+        list.add("Privet6");
         System.out.println(list.size());
         System.out.println(list.get(1));
         list.remove(5);
